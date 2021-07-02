@@ -1,0 +1,266 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+h1,h2,h3,h4,h5
+{
+    font-family: 'Open Sans',sans-serif;
+}
+/*Start Header*/
+header{
+  position: fixed;
+  width: 6.7%;
+  background-color: #FFF;
+  z-index: 99;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* box-shadow: 7px 0px #0000006b; */
+}
+header .logo{
+  padding: 25px;
+  margin-top: 20px;
+  height: 40%;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+.icon-toggle {
+    padding: 25px;
+    height: 50%;
+}
+.icon-toggle .line {
+  width: 42px;
+  height: 5px;
+  background-color: #000;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+.icon-toggle .line:nth-child(2) {
+  width: 35px;
+}
+.icon-toggle .line:nth-child(4) {
+  width: 22px;
+}
+header :checked ~ .icon-toggle .line:nth-child(1) {
+  transform: translateY(10px) rotate(225deg);
+}
+header :checked ~ .icon-toggle .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-225deg);
+}
+header :checked ~ .icon-toggle .line:nth-child(2) {
+  opacity: 0;
+}
+header :checked ~ .icon-toggle .line:nth-child(4) {
+  opacity: 0;
+  transition: none !important;
+}
+/*End Header*/
+/*Start Navbar*/
+nav{
+  position: fixed;
+  background-color: #f7f7f7;
+  width: 18%;
+  height: 100%;
+  left: -200px;
+  padding: 20px;
+  z-index: 98;
+  transition: all .35s;
+}
+nav.open{
+  left: 56px !important;
+  z-index: 98;
+}
+nav .nav-logo{
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+}
+nav .nav{
+  height: 55%;
+}
+nav .main-menu {
+  width: 100%;
+  margin-right: 40px;
+}
+nav .main-menu li{
+  border-bottom: 0;
+  text-align: center;
+  display: block;
+  padding: 12px 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+.main-menu li a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all .35s;
+    font-weight: bold;
+}
+.main-menu li:nth-child(1) a{
+  color: #f0437e;
+}
+.main-menu li:hover a{
+  color: #f0437e;
+}
+nav .footer{
+  height: 25%;
+  margin: 10px;
+}
+nav .footer h5{
+  font-size: 16px;
+  padding: 20px;
+}
+nav .footer .social-icons{
+  margin-left: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.social-icons ul{
+  margin: 0;
+  padding: 0px;
+}
+.social-icons li{
+  display: inline;
+  padding: 6px;
+  font-size: 20px;
+}
+.social-icons li a{
+  color:#000;
+  font-weight: bold;
+}
+.social-icons li:hover a{
+  color:#f0437e;
+}
+/*End Navbar*/
+/*Start Photo Gallery*/
+.containerr{
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.Photo_Gallery{
+  padding: 0;
+  position: relative;
+}
+.Photo_Gallery figure {
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+.Photo_Gallery figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    vertical-align: baseline;
+    border-style: none;
+    box-sizing: border-box;
+}
+.Photo_Gallery .layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.9);
+  font-family: 'Poppins',sans-serif;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .35s;
+}
+.Photo_Gallery:hover .layer{
+  visibility: visible;
+  opacity: 1;
+}
+.Photo_Gallery .layer h3 {
+    margin-bottom: 0;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 2.25rem;
+}
+.layer ul {
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+.layer li {
+    margin: 0 3px;
+}
+.layer li a {
+    font-size: .875rem;
+    color: #a6a6a6;
+}
+.flex {
+    display: flex;
+}
+/*End Photo Gallery*/
+@media screen and (max-width: 1290px) {
+  header{
+    width: 7.7%;
+  }
+}
+@media screen and (max-width: 991px) {
+  header{
+    width: 100%;
+    height: 15%;
+  }
+  header .logo {
+    padding: 25px;
+    margin-top: 0;
+    height: 40%;
+    margin-left: 20px;
+  }
+  .icon-toggle {
+    padding: 25px;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav {
+    position: fixed;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    padding: 20px;
+    z-index: 98;
+    transition: all .35s;
+    bottom: 600px;
+  }
+  nav.open {
+    left: 0px !important;
+    z-index: 98;
+    bottom: 0;
+  }
+  nav .nav-logo {
+    display: none;
+  }
+  nav .main-menu li {
+    border-bottom: 0;
+    text-align: center;
+    display: block;
+    padding: 7px 0;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  nav .nav {
+    height: 50%;
+    margin-top: 70px;
+  }
+  nav .footer {
+    height: 36%;
+    margin: 0px;
+    text-align: center;
+  }
+}
